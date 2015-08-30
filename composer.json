@@ -1,0 +1,14 @@
+{
+  "name": "maxic/laravel-dle-auth",
+  "description": "Laravel DLE auth driver, with events [login,logout] on remote site",
+  "keywords": ["laravel", "dle", "auth", "auth-driver"],
+  "license": "MIT",
+  "require": {
+    "php": ">=5.4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Maxic\\DleAuth\\": "src"
+    }
+  }
+}
