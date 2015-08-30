@@ -40,10 +40,7 @@ class Authenticate {
                     $_SESSION['dle_user_id'] > 0 && !empty($_SESSION['dle_password'])) {
                     // Manual authenticate
                     \Session::flash('dle_session_auth', true);
-                    if (Auth::attempt(['user_id' => $_SESSION['dle_user_id'], 'password' => $_SESSION['dle_password']]))
-                    {
-                        return redirect()->intended('/');
-                    }
+                    Auth::attempt(['user_id' => $_SESSION['dle_user_id'], 'password' => $_SESSION['dle_password']]);
                 }
             } else {
                 // Check, if user in DLE cms logged out
